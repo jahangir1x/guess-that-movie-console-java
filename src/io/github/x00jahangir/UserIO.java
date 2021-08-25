@@ -1,4 +1,4 @@
-package io.github.zinis;
+package io.github.x00jahangir;
 
 import java.util.Scanner;
 
@@ -6,9 +6,9 @@ public class UserIO {
 
     /**
      * shows current game progression: the movie title user revealed so far, wrong letters and total wrong guess
-     * @param partiallyRevealedMovieTitle
-     * @param wrongLetters
-     * @param totalWrongGuess
+     * @param partiallyRevealedMovieTitle       the title to show to user
+     * @param wrongLetters                      wrong letter inputs by user
+     * @param totalWrongGuess                   total wrong guess by user
      */
     public static void ShowGameProgress(String partiallyRevealedMovieTitle,String wrongLetters,int totalWrongGuess) {
 
@@ -23,8 +23,8 @@ public class UserIO {
     /**
      * returns valid input from user.
      * user cannot input multiple letters or numbers or special characters or previously right character.
-     * @param rightLetters
-     * @return
+     * @param rightLetters      right guess string by users
+     * @return                  returns valid input from user
      */
     public static String GetValidGuess(String rightLetters) {
         while (true) {
@@ -32,14 +32,14 @@ public class UserIO {
             Scanner scanner = new Scanner(System.in);
             String userGuess = scanner.nextLine().toLowerCase();
 
-            if (userGuess.length() != 1) {
+            if (userGuess.matches(".*[^a-zA-Z].*")) {
+                System.out.println("Please input valid letter");
+            }
+            else if (userGuess.length() != 1) {
                 System.out.println("Please input only one letter.");
             }
             else if (rightLetters.contains(userGuess)) {
                 System.out.println("You already guessed \"" + userGuess + "\"");
-            }
-            else if (!userGuess.matches("[a-z]")) {
-                System.out.println("Please input valid letter");
             }
             else{
                 return userGuess;

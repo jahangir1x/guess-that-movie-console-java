@@ -1,4 +1,4 @@
-package io.github.zinis;
+package io.github.x00jahangir;
 
 public class Game {
     private enum GameState {

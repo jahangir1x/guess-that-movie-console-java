@@ -1,4 +1,4 @@
-package io.github.zinis;
+package io.github.x00jahangir;
 
 import java.io.File;
 import java.io.FileNotFoundException;
