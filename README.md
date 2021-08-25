@@ -1,4 +1,4 @@
-# Guess-That-Movie
+# Guess That Movie
  a hangman like console game
  
 ## Demo:
