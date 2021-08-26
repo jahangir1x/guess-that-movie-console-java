@@ -2,8 +2,9 @@
  a hangman like console game
  
 ## Demo:
-![winning game](https://i.imgur.com/VmVajsV.gif)
-![losing game](https://i.imgur.com/a7RWXD4.gif)
+![winning game](https://i.imgur.com/nKHFCKV.gif)
+![losing game](https://i.imgur.com/BInTcfj.gif)
 
-## Releases:
-Head over to the [Releases page](https://github.com/x00jahangir/Guess-That-Movie/releases)
+## Build and Releases:
+build with [IntelliJ IDEA](https://www.jetbrains.com/idea/) </br>
+or try _**slightly modified**_ JAR from [Releases](https://github.com/x00jahangir/Guess-That-Movie/releases) 
