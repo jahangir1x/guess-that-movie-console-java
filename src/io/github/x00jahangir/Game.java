@@ -20,7 +20,7 @@ public class Game {
         totalWrongGuess = 0;
 
         // show welcome messages
-        System.out.println("                     ---Guess That Movie---\n");
+        // System.out.println("                     ---Guess The Movie---\n");
     }
 
     /**

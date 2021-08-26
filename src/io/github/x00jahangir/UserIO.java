@@ -28,21 +28,23 @@ public class UserIO {
      */
     public static String GetValidGuess(String rightLetters) {
         while (true) {
-            System.out.print("Guess a letter: ");
-            Scanner scanner = new Scanner(System.in);
-            String userGuess = scanner.nextLine().toLowerCase();
+            try {
+                System.out.print("Guess a letter: ");
+                Scanner scanner = new Scanner(System.in);
+                String userGuess = scanner.nextLine().toLowerCase();
 
-            if (userGuess.matches(".*[^a-zA-Z].*")) {
-                System.out.println("Please input valid letter");
-            }
-            else if (userGuess.length() != 1) {
-                System.out.println("Please input only one letter.");
-            }
-            else if (rightLetters.contains(userGuess)) {
-                System.out.println("You already guessed \"" + userGuess + "\"");
-            }
-            else{
-                return userGuess;
+                if (userGuess.matches(".*[^a-zA-Z].*")) {
+                    System.out.println("Please input valid letter");
+                } else if (userGuess.length() != 1) {
+                    System.out.println("Please input only one letter.");
+                } else if (rightLetters.contains(userGuess)) {
+                    System.out.println("You already guessed \"" + userGuess + "\"");
+                } else {
+                    return userGuess;
+                }
+            } catch (Exception e) {
+                System.out.println("\nBye...");
+                System.exit(0);
             }
         }
     }
